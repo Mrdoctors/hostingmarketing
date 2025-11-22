@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Health Forward - Transform Your Menu with Heirloom Seeds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2B3E50;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #E6D4A3;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            width: 280px;
+            height: auto;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #E6D4A3 0%, #D4C190 100%);
+            padding: 60px 20px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: #2B3E50;
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            color: #4A5F7A;
+            font-size: 20px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background-color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-title {
+            color: #2B3E50;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .form-description {
+            color: #6B7280;
+            font-size: 16px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            color: #2B3E50;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #E6D4A3;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #2B3E50;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px 24px;
+            background-color: #2B3E50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1F2937;
+        }
+        
+        .privacy-note {
+            text-align: center;
+            font-size: 13px;
+            color: #6B7280;
+            margin-top: 15px;
+        }
+        
+        /* Guides Section */
+        .guides-section {
+            background-color: #F9FAFB;
+            padding: 60px 20px;
+        }
+        
+        .guides-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .guides-section h2 {
+            text-align: center;
+            color: #2B3E50;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .guide-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .guide-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .guide-image {
+            width: 100%;
+            height: 200px;
+            background-color: #E6D4A3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .guide-title {
+            padding: 20px;
+            color: #2B3E50;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2B3E50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://i.imgur.com/NSCwZmQ.jpeg" alt="My Health Forward - Regenerative & Holistic Roots">
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Menu with Rare Heirloom Seeds</h1>
+            <p class="hero-subtitle">Discover 50 unique varieties that will set your farm-to-table restaurant apart</p>
+            
+            <!-- Form -->
+            <div class="form-section">
+                <h2 class="form-title">Get Your Free Guide</h2>
+                <p class="form-description">Join 500+ executive chefs growing extraordinary ingredients</p>
+                
+                <form id="guideForm">
+                    <div class="form-group">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="restaurant">Restaurant Name</label>
+                        <input type="text" id="restaurant" name="restaurant" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Get My Free Guide</button>
+                    
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guides Section -->
+    <section class="guides-section">
+        <div class="guides-container">
+            <h2>Explore Our Guide Collection</h2>
+            <div class="guides-grid">
+                <div class="guide-item">
+                    <div class="guide-image">🌿</div>
+                    <div class="guide-title">Natural Alternatives to Tylenol</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">🏴‍☠️</div>
+                    <div class="guide-title">Collagen & Vitamin C</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">✅</div>
+                    <div class="guide-title">Glyphosate Free Certification</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">🚜</div>
+                    <div class="guide-title">Liability Immunity for Pesticides</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">🏔️</div>
+                    <div class="guide-title">Oregon DLCD</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">🥑</div>
+                    <div class="guide-title">Organipeel Discontinued</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">🏛️</div>
+                    <div class="guide-title">House Bill Limits the EPA</div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-image">🐄</div>
+                    <div class="guide-title">Prime Act</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 My Health Forward. Regenerating America's Health & Soil.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('guideForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const restaurant = document.getElementById('restaurant').value;
+            const email = document.getElementById('email').value;
+            
+            // Here you would normally send this data to your email service
+            // For demo purposes, we'll just show a success message
+            alert(`Thank you, ${name}! Your guide has been sent to ${email}. Check your inbox for our exclusive heirloom seed guide.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
